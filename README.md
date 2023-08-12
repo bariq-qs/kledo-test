@@ -1,3 +1,8 @@
+## Prerequisites
+* This project when intital use node version 16.19.0
+* Please ensure your node version is >= 16.19.0
+* [yarn](https://classic.yarnpkg.com/en/ "Yarn documentation") must be installed on your operating system
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

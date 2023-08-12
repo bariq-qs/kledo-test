@@ -1,0 +1,19 @@
+.container-login,
+.container-profile {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  min-height: calc(100vh - 4.3rem);
+
+  .wrap-form {
+    width: 50%;
+    margin: auto;
+  }
+
+  .card-form {
+    border-radius: 25px;
+    border: 1px solid #E2DDDD;
+    background: #F8F8F8;
+    position: relative;
+  }
+}
