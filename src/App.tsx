@@ -1,10 +1,9 @@
-import routes from "router";
-import { useRoutes } from "react-router-dom";
+import Router from "router";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import 'react-confirm-alert/src/react-confirm-alert.css'
 
 function App() {
-  const content = useRoutes(routes);
 
   return (
     <>
@@ -27,7 +26,7 @@ function App() {
         autoClose={1500}
         theme='colored'
       />
-      {content}
+      <Router/>
     </>
   );
 }

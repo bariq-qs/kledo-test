@@ -1,10 +1,10 @@
 import { FormProvider, useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { toast } from 'react-toastify';
-import { useMutation, useQuery } from '@tanstack/react-query';
+import { toast } from "react-toastify";
 import { loginUserFn } from "api/authApi";
 import "assets/styles/scss/pages/login.scss";
+import { useNavigate } from "react-router-dom";
 
 const loginSchema = yup.object({
   email: yup.string().required("Email harus diisi").email("Email tidak valid"),
@@ -17,8 +17,13 @@ const loginSchema = yup.object({
 export type LoginInput = yup.InferType<typeof loginSchema>;
 
 const Login = () => {
+  const navigate = useNavigate();
   const methods = useForm<LoginInput>({
     resolver: yupResolver(loginSchema),
+    defaultValues: {
+      email: "me@kledo.id",
+      password: "123456",
+    },
   });
 
   const {
@@ -29,21 +34,22 @@ const Login = () => {
   } = methods;
 
   const loginUser = async (values: LoginInput) => {
-    loginUserFn(values).then((res) => {
-      console.log('response login', res)
-    }).catch((err) => {
-      if (err) {
-        console.log('response login error', err)
-        toast.error(err.data.message, {
-          position: 'top-right',
-        });
-      }
-    })
-  }
+    loginUserFn(values)
+      .then((res) => {
+        if (res.success) {
+          navigate("/admin/");
+        }
+      })
+      .catch((err) => {
+        if (err) {
+          toast.error(err.data.message, {
+            position: "top-right",
+          });
+        }
+      });
+  };
 
   const onSubmitHandler: SubmitHandler<LoginInput> = (values) => {
-    // 👇 Executing the loginUser Mutation
-    console.log("values submit", values);
     loginUser(values);
   };
 

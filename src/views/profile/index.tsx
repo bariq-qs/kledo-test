@@ -7,20 +7,20 @@ const Profile = () => {
         <p className=' text-5xl text-center font-bold mb-5'>Profile</p>
         <div className='card-form p-5 md:p-14'>
           <div className='mb-4'>
-            <label className='mb-1'>Email</label>
-            <p className=' font-bold w-1/2 md:w-3/5'>Tony Stark</p>
+            <label className='mb-1'>Nama</label>
+            <p className=' font-bold w-1/2 md:w-3/5'>Bariq Qushoyyi Shobriy</p>
           </div>
           <div className='mb-4'>
             <label className='mb-1'>Alamat</label>
-            <p className=' font-bold w-1/2 md:w-3/5'>Malybu Mansion</p>
+            <p className=' font-bold w-1/2 md:w-3/5'>Surabaya, Jawa Timut</p>
           </div>
           <div className='mb-4'>
             <label className='mb-1'>No. HP</label>
-            <p className=' font-bold w-1/2 md:w-3/5'>212-970-4133</p>
+            <p className=' font-bold w-1/2 md:w-3/5'>082134196300</p>
           </div>
           <div className='mb-4'>
             <label className='mb-1'>Email</label>
-            <p className=' font-bold w-1/2 md:w-3/5'>@starkenterprises.com</p>
+            <p className=' font-bold w-1/2 md:w-3/5'>bariqqushoyyi@gmail.com</p>
           </div>
           <div className=''>
             <label className='mb-1'>Motto</label>

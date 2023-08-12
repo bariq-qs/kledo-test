@@ -3,7 +3,6 @@ import { useEffect } from "react";
 
 const PublicLayout = () => {
   const location = useLocation();
-  console.log('loca', location)
   const menus = [
     {
       label: "Profile",
@@ -14,9 +13,6 @@ const PublicLayout = () => {
       path: "/",
     },
   ];
-  useEffect(() => {
-    console.log("eff");
-  }, []);
 
   return (
     <div className='container-public'>

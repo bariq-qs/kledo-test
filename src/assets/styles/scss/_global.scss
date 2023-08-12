@@ -1,0 +1,39 @@
+.card {
+  border-radius: 18px;
+  background: #FFF;
+  padding: 24px 30px;
+
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+table {
+  th {
+    background-color: #F2F2F2;
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  td {
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  tbody>tr {
+    border-bottom: 1px solid #F2F2F2;
+  }
+
+  td:first-child,
+  th:first-child {
+    padding-left: 30px;
+    border-radius: 8px;
+  }
+}
